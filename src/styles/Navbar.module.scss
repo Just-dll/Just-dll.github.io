@@ -1,0 +1,20 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Write your custom CSS for the navbar in navbar.module.scss
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  //max-width: 980px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100hv;
+  margin: 0 auto; 
+  position: relative;
+}
+
+.navbar-brand {
+  color: #000;
+}

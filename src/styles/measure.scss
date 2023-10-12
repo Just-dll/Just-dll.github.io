@@ -1,0 +1,58 @@
+$pos1: 991px;
+$pos2: 767px;
+$pos3:479px;
+$postTemp:950px;
+
+$xl: 950px;
+$lg: 768px;
+$md: 480px; 
+
+@media (max-width: $xl) and (min-width: $lg) {
+
+    .slider {
+        img {
+            max-width: 748px; 
+          }
+    }
+
+    
+    
+
+    .page {
+        max-width: $lg;
+    }
+  }
+
+  @media (max-width: $lg) and (min-width: $md) {
+
+
+    .page {
+        max-width: 480px;
+    }
+    .slider {
+        img {
+
+            max-width: 480px;
+          }
+    }
+    .discordLink {
+        position:relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+  }
+
+  @media (max-width: $md) {
+    .page {
+        max-width: 320px; 
+    }
+    .slider {
+        img {
+
+            max-width: 320px;
+          }
+    }
+    
+    
+  }

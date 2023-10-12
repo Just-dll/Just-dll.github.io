@@ -1,0 +1,27 @@
+.footer {
+    background-color: #212529;
+    padding: 1px 10px 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Updated property */
+    width: 100%;
+
+    .socialmedia { /* Updated class name */
+      display: flex;
+      margin-top: 1rem;
+
+      a {
+        color: white;
+        margin-right: 1rem;
+      }
+    }
+
+    .copyright {
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }

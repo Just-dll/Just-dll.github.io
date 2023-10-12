@@ -1,0 +1,236 @@
+// Breakpoints
+
+@import url('../styles/lessframework.scss');
+@import 'measure';
+//@import 'shrinker';
+$small: 500px;
+$medium: 750px; 
+$large: 980px;
+
+$xl: 950px;
+$lg: 768px;
+$md: 480px; 
+
+$color1: #fff; 
+$color2: #eee;
+
+// Widths
+$carousel-width-small: 60%;
+$carousel-width-medium: 80%;
+$carousel-width-large: 100%; 
+
+// Mixin for responsive widths  
+@mixin responsive-width($width-small, $width-medium, $width-large) {
+  width: $width-large;
+
+  @media (max-width: $medium) {
+    width: $width-medium;
+  }
+
+  @media (max-width: $small) {
+    width: $width-small; 
+  }
+}
+
+#header {
+  background-image: url('../utils/noise-all.png');
+  background-image: url(../utils/strip.png);
+  background-repeat: repeat-x, repeat-x;
+  background-position: bottom center, top center;
+  padding: 0px 0px 57px 0px !important;
+}
+
+header {
+  padding-bottom: 57px;
+}
+.page {
+  max-width: $large; // Shrink page below 980px
+  padding-top: 30px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+/*.carousel-container {
+  @include responsive-width($carousel-width-small, $carousel-width-medium, $carousel-width-large);
+  height: auto; 
+}*/
+.right-container {
+  display: flex;
+  flex-direction: column;
+  .text-container {
+    padding-top:3px;
+    float: right;
+    //margin-top: 20px; 
+    //margin-right: 20px;
+    margin-left: 30px;
+    //width: 100%; // Fill parent width
+    
+    
+  }
+  .discordLink {
+    margin-left:30px;
+    position:absolute;
+    bottom: 50px;
+    
+    img {
+      
+      bottom: 10px;
+      left: 10px;
+      max-width: 300px;
+      max-height: 45px;
+    }
+  }
+}
+
+
+
+.slider-container {
+  padding:10px;
+  //background: ;
+}
+@media (max-width: $xl) {
+
+  .text-container {
+    float: none;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .page {
+    flex-direction: column;
+    max-width: $xl;
+  }
+  .slider-container {
+    margin: 0 auto; 
+  }
+
+  .page {
+    align-items: center;
+  }
+}
+
+/*discordLink {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(45deg, $color1 25%, transparent 25%),
+      //...other gradients  
+
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px; 
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+}*/
+
+.small-text {
+  font-size: 13px;
+  line-height: 1.5em; 
+}
+
+.main .page{
+  min-height: 500px;
+	margin-top: -57px;
+  
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.3); 
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,.3); 
+	-o-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+	box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+
+  background-image: url(../utils/border-bg-bottom.png), url(../utils/border-bg-top.png);
+  background-repeat: repeat-x, repeat-x;
+  background-position: bottom left, top left;
+  background-color: #f1f1f1;
+
+}
+
+
+.clearfix:after,
+.clearfix:before {
+	content:"";
+    display:table;
+}   
+    
+.clearfix:after {
+	clear:both;
+}
+
+.clearfix {
+    zoom:1;
+}
+
+.home-headline{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.home-block{
+	padding-bottom: 50px;
+	margin-bottom: 0px;
+}
+
+
+.home-block figure{
+	float: left;
+	width: 300px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	line-height: 1.2em;
+}
+
+.home-block figure .thumb{
+	display: block;
+	width: 280px;
+	padding: 10px;
+	margin-bottom: 19px;
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.1); 
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,.1);
+	-o-box-shadow: 0px 0px 3px rgba(0,0,0,.1);
+	box-shadow: 0px 0px 3px rgba(0,0,0,.1);
+}
+
+.home-block figure img{
+	max-width: 100%;
+		
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.home-block figure .thumb:hover img{
+	opacity: 0.1;
+}
+
+.home-block figure figcaption{
+	line-height: 1.5em;
+}
+.home-block figure figcaption strong{
+	display: block;
+	font-size: 18px;
+	margin-bottom: 11px;
+}
+
+.home-block .theme-link-button,
+.left-home-block .theme-link-button,
+.right-home-block .theme-link-button{
+	float: right;
+	margin-top: 13px;
+	margin-right: 20px;
+}

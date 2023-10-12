@@ -1,0 +1,67 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css?family=Arvo:700');
+@import url('../styles/lessframework.scss');
+// Fonts
+$font-stack: Helvetica, Arial, sans-serif;
+$font-arvo: 'Arvo', Arial, sans-serif; 
+
+$font-size-base: 13px;
+
+// Colors
+$color-light: #f1f1f1;  
+$color-accent: #fbe471;
+
+$primary-color: #383f47; 
+$secondary-color: #fbe471;
+
+// Base styles
+body {
+  font-family: $font-stack;
+  font-size: $font-size-base;
+  color: #888;  // color of text
+  align-items: center;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-arvo;
+  font-weight: bold;
+}
+
+h1 {font-size: 42px;}
+h2 {font-size: 36px;} 
+h3 {font-size: 24px;}
+h4 {font-size: 21px;}
+h5 {font-size: 18px;}
+h6 {font-size: 14px;}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: lighten($primary-color, 50%); 
+  }
+}
+
+// Header and footer
+header, footer {
+  background-color: $primary-color;
+  background-image: url('../utils/noise-all.png');
+  color: $color-light; 
+}
+
+// Main content area
+#main {
+  h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 1px 0 rgba(255,255,255, 0.5); 
+  }
+} 
+  .page {
+    position: relative;
+  }
+
+  ::selection {
+    background-color: $secondary-color
+  }
